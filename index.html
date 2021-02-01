@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cheat Sheet: HTML Table Reference</title>
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Font-Face Reference</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#types">Types</a></li>
+          <li><a href="#syntax">Syntax</a></li>
+          <li><a href="#descriptors">Descriptors</a></li>
+        </ul>
+      </nav>
+    </header>
+      <main>
+        <section class="intro">
+            <p>The @font-face CSS at-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.</p>
+        </section>
+        <section id="types">
+            <h2>Font MIME Types</h2>
+            <br>
+            <table>
+                <thead>
+                 <tr>
+                  <th>Format</th>
+                  <th>MIME type</th>
+                 </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                  <td>TrueType</td>
+                  <td><code>font/ttf</code></td>
+                 </tr>
+                 <tr>
+                  <td>OpenType</td>
+                  <td><code>font/otf</code></td>
+                 </tr>
+                 <tr>
+                  <td>Web Open Font Format</td>
+                  <td><code>font/woff</code></td>
+                 </tr>
+                 <tr>
+                  <td>Web Open Font Format 2</td>
+                  <td><code>font/woff2</code></td>
+                 </tr>
+                </tbody>
+            </table>
+        </section>
+        <br>
+
+        <section id="syntax">
+            <h2>Syntax</h2>
+            <pre>
+                <code class="code-block">
+            @font-face {
+            font-family: "Open Sans";
+            src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+            url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+                    }
+                </code>
+            </pre>
+           
+        </section>
+
+        <section id="descriptors">
+            <h2>Descriptors</h2>
+            <ul>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-display</span></li>
+                        <li>Determines how a font face is displayed based on whether and when it is downloaded and ready to use.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-family</span></li>
+                        <li>Specifies a name that will be used as the font face value for font properties.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-stretch</span></li>
+                        <li>A font-stretch value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example font-stretch: 50% 200%;</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-style</span></li>
+                        <li>A font-style value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example font-style: oblique 20deg 50deg;</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-weight</span></li>
+                        <li>A font-weight value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example font-weight: 100 400;</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-variant</span></li>
+                        <li>A font-variant value.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-feature-settings</span></li>
+                        <li>Allows control over advanced typographic features in OpenType fonts.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">font-variation-settings</span></li>
+                        <li>Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">src</span></li>
+                        <li>Specifies the resource containing the font data. This can be a URL to a remote font file location or the name of a font on the user's computer.</li>
+                        <li>To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a format() function:</li>
+                        <li>
+                            <pre class="code-block">
+                                <code>
+src: url(ideal-sans-serif.woff) format("woff"),<br> url(basic-sans-serif.ttf)format("truetype");
+                                </code>
+                            </pre>
+                        </li>
+                            <li>The available types are: "woff", "woff2", "truetype", "opentype", "embedded-opentype", and "svg".</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><span class="list-title">unicode-Range</span></li>
+                        <li>The range of Unicode code points to be used from the font.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <br>
+    <footer>
+          <h5> Made by Dave.</h5>
+    </footer>
+  </body>
+</html>
